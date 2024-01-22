@@ -50,7 +50,7 @@ class Bot(Client):
             await test.delete()
         except Exception as e:
             self.LOGGER(__name__).warning(e)
-            self.LOGGER(__name__).warning(f"Make Sure bot is Admin in DB Channel, and Double check the CHANNEL_ID Value, Current Value {CHANNEL_ID}")
+            self.LOGGER(__name__).warning(f"Botto ga DB chaneru no kanrishadearu koto o kakunin shi, CHANNEL_ID-chi, genzai no atai {CHANNEL_ID} o sai kakunin shimasu.")
             self.LOGGER(__name__).info("\notto ga teishi shimashita. https://t.me/CodeXBotzSupport ni sanka shite sapōto o ukete kudasai")
             sys.exit()
 
