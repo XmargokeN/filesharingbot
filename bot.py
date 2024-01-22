@@ -39,9 +39,9 @@ class Bot(Client):
                 self.invitelink = link
             except Exception as a:
                 self.LOGGER(__name__).warning(a)
-                self.LOGGER(__name__).warning("Bot can't Export Invite link from Force Sub Channel!")
-                self.LOGGER(__name__).warning(f"Please Double check the FORCE_SUB_CHANNEL value and Make sure Bot is Admin in channel with Invite Users via Link Permission, Current Force Sub Channel Value: {FORCE_SUB_CHANNEL}")
-                self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/CodeXBotzSupport for support")
+                self.LOGGER(__name__).warning("Botto wa fōsu sabu chan'neru kara shōtai rinku o ekusupōto dekimasen.")
+                self.LOGGER(__name__).warning(f"FORCE _ SUB _ CHANNEL-chi o sai kakunin shi, botto ga rinku kengen ni yoru yūzā no shōtai o motsu chaneru no kanrishadearu koto o kakuninshitekudasai. Genzai no kyōsei sabu chaneru-chi: {FORCE _ SUB _ CHANNEL}")
+                self.LOGGER(__name__).info("\nBotto ga teishi shimashita. https://t.me/CodeXBotzSupport ni sanka shite sapōto o ukete kudasai")
                 sys.exit()
         try:
             db_channel = await self.get_chat(CHANNEL_ID)
@@ -51,7 +51,7 @@ class Bot(Client):
         except Exception as e:
             self.LOGGER(__name__).warning(e)
             self.LOGGER(__name__).warning(f"Make Sure bot is Admin in DB Channel, and Double check the CHANNEL_ID Value, Current Value {CHANNEL_ID}")
-            self.LOGGER(__name__).info("\nBot Stopped. Join https://t.me/CodeXBotzSupport for support")
+            self.LOGGER(__name__).info("\notto ga teishi shimashita. https://t.me/CodeXBotzSupport ni sanka shite sapōto o ukete kudasai")
             sys.exit()
 
         self.set_parse_mode(ParseMode.HTML)
